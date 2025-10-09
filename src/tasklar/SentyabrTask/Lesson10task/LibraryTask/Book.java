@@ -1,4 +1,4 @@
-package tasklar.SentyabrTask.Lesson10task;
+package tasklar.SentyabrTask.Lesson10task.LibraryTask;
 
 public class Book {
     String name;
