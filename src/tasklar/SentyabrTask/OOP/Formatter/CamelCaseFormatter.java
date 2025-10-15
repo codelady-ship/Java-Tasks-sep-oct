@@ -20,6 +20,6 @@ public class CamelCaseFormatter extends Formatter {
             }
         }
 
-        return sb.toString().trim();
+        return sb.toString();
     }
 }
