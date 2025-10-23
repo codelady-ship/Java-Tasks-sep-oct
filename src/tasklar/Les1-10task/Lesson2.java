@@ -10,6 +10,12 @@ Qalan bütün hallarda biletin tam qiyməti
 Bir biletin standart qiyməti $10-dur.*//*
 
 */
+/*skaner (scanner) vasitəsilə istifadəçidən yaşını və tələbə olub-olmadığını soruşun.
+Nəticə əsasında aşağıdakı şərtlərə uyğun teatr üçün biletin qiymətini ekrana çıxarın:
+Əgər yaş 12-dən kiçikdirsə, bilet pulsuzdur ($0)
+Əgər tələbədirsə və ya yaş 65-dən böyük və ya bərabərdirsə, 50% endirimli qiymət
+Qalan bütün hallarda biletin tam qiyməti
+Bir biletin standart qiyməti $10-dur.*/
 /*public class Lesson2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
