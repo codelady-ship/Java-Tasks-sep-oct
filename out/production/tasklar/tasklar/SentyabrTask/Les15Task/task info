@@ -1,0 +1,39 @@
+/*
+3.1. İstifadəçidən şifrə istəyin.
+3.2. Bu şifrənin çətinlik səviyyəsini yoxlayan bir static method yazın.
+3.3. Method-dan gələ biləcək xətaları handle edin və onlara uyğun mesajları ekrana çıxarın.
+3.4. Bu method aşağıdakı bütün halları düzgün formada emal etməlidir:
+3.5. Şifrə boş String-dirsə, EmptyPasswordException qayıtmalıdır.
+3.6. Şifrənin uzunluğu 8-dən aşağıdırsa, TooShortPasswordException qayıtmalıdır.
+3.7. Əgər şifrədə böyük hərf yoxdursa, NoCapitalLetterException qayıtmalıdır.
+3.8. Əgər şifrədə kiçik hərf yoxdursa, NoRegularLetterException qayıtmalıdır.
+3.9. Əgər şifrədə rəqəm yoxdursa, NoDigitException qayıtmalıdır.
+Əgər şifrədə xüsusi simvol yoxdursa (yuxarıda sadalanan simvollardan başqa hər hansısa biri),
+NoSpecialCharacterException qayıtmalıdır.
+*/
+/*
+Istifadəçidən iki ədəd və (+, -, *, /) simvollarından birini alın.
+Müvafiq əməliyyatı iki ədəd üzrə yerinə yetirən
+proqram yazın (0-a bölməni nəzərə alın, əgər bölən 0 olarsa,
+müvafiq xəta mesajını ekrana çıxarın).
+2. İstifadəçi ədəd əvəzinə başqa məlumat daxil etdiyi ssenarini nəzərə alın.
+Əlavə olaraq, 0-a bölməni də nəzərə alın.
+Əgər bölən 0 olarsa, müvafiq xətanı aradan qaldırın.
+*/
+/*
+  For dövrü olmadan 1-dən n-ədək ədədləri ekrana çıxaran proqram.
+  N 0-dan böyük və 10^10-dan kiçik olmalıdır.
+*/
+
+/*Ticket Task-
+skaner (scanner) vasitəsilə istifadəçidən yaşını və tələbə olub-olmadığını soruşun.
+Nəticə əsasında aşağıdakı şərtlərə uyğun teatr üçün biletin qiymətini ekrana çıxarın:
+Əgər yaş 12-dən kiçikdirsə, bilet pulsuzdur ($0)
+Əgər tələbədirsə və ya yaş 65-dən böyük və ya bərabərdirsə, 50% endirimli qiymət
+Qalan bütün hallarda biletin tam qiyməti
+Bir biletin standart qiyməti $10-dur.
+
+1. Yuxarıdakı task-da istifadəçi yaş yerinə tam ədəddən başqa bir məlumat daxil edərsə
+ və ya tələbə olub-olmamasını göstərən true/false əvəzinə başqa məlumat tipi daxil
+ edən ssenarini nəzərə alın. Çıxa biləcək xətaları aradan qaldırın və istifadəçiyə
+ məlumatı səhv formada daxil etdiyini göstərin.*/

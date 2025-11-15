@@ -1,0 +1,57 @@
+Diqqət, tapşırığı yerinə yetirərkən SOLID prinsiplərinə riayət etməyiniz mütləqdir!
+
+Proqram aşağıdakı tələblərə cavab verə bilməlidir:
+0. Bank yaradın, yaradılarkən kredit şərtləri (kredit kartından aparılan əməliyyatlar üçün faiz) təyin olunsun.
+1. Proqramda istifadəçi aşağıdakı məlumatları dolduraraq qeydiyyatdan keçə bilməlidir:
+Ad
+Soyad
+Doğum tarixi
+Telefon nömrəsi
+FIN
+Şifrə (şifrənin təhlükəsizliyi yoxlanılmalıdır)
+2. Proqramda istifadəçi FIN kod ilə qeydiyyatdan keçibsə, öz hesabına giriş edə bilməlidir.
+2.1. Hesabına giriş etmiş istifadəçi özü haqqında məlumatlarını görə bilməlidir.
+2.2. Hesabına giriş etmiş istifadəçi seansı bitirə (hesabdan çıxış edə) bilməlidir.
+3. Hesabına giriş etmiş istifadəçi yeni kart aça bilməlidir.
+3.1. Kart açılarkən istifadəçi ona özündən ad da verə bilməlidir.
+3.2. Kart debit və ya kredit kartı ola bilər.
+3.2.1. Əgər kredit kartı açmaq istəsə, ondan aşağıdakı kateqoriyalardan hansına aid olduğu soruşulmalıdır və aylıq gəliri soruşulmalıdır.
+tələbə
+pensiyaçı
+işçi
+işsiz
+3.2.2. Əgər yuxarıdakı kateqoriyalardan tələbə və ya pensiyaçı seçilərsə, aylıq gəlirinin iki qatı dəyərində kredit limiti təklif olunmalıdır.
+3.2.3. Əgər yuxarıdakı kateqoriyalardan işçi seçilərsə, aylıq gəlirinin dörd qatı dəyərində kredit limiti təklif olunmalıdır.
+3.2.4. Əgər işsizdirsə, müraciət uğursuz olmalı və bunu ifadə edən xəta atılmalıdır (throw).
+3.2.5. İstifadəçiyə tiqdim olunan kredit limitini istifadəçi aşağı endirə və ya maksimum təklif olunan limitlə kart aça bilər.
+3.3. İstifadəçi müraciətin istənilən hissəsində sorğunu ləğv edə bilməlidir.
+4. Hesabına giriş etmiş istifadəçi mövcud kartlarını görə bilməlidir.
+4.1. İstifadəçi hər hansısa kartlarından birini seçdikdən sonra o kart üzərində aşağıdakı əməliyyatları yerinə yetirə bilməlidir:
+Kart məlumatlarının görünməsi (16 rəqəmli PAN, son etibarlılıq müddəti) (Bu bölmədə istifadəçi CVC-ni görmək imkanı da olmalıdır, lakin bunu edə bilmək üçün öz şifrəsini yenidən daxil etməlidir)
+Əməliyyat tarixçəsini görmək
+Kartı bloklamaq (əgər artıq blokdadırsa, bloku açmaq)
+4.2. Əməliyyat tarixçəsi siyahı formasında hər birini ayrı sətr olmaqla çıxarın:
+Göndərən (əgər seçilən kart qəbul edən tərəfdirsə), (əgər mədaxildirsə, sadəcə mədaxil yazısı)
+Qəbul edən (əgər seçilən kart göndərən tərəfdirsə), (əgər məxaricdirsə, sadəcə məxaric yazısı)
+Məbləğ
+Əməliyyat tarixi
+4.3. Spesifik əməliyyat seçildikdə tranzaksiya haqqında bütün məlumatlar görünməlidir:
+Göndərən (əgər mədaxildirsə, sadəcə mədaxil yazısı)
+Qəbul edən (əgər məxaricdirsə, sadəcə məxaric yazısı)
+Məbləğ
+Komissiya (əgər tətbiq olunubsa, komissiya məbləği, olunmayıbsa, 0)
+İlkin balans
+Yekun balans
+Əməliyyat tarixi
+5. Hesabına giriş etmiş istifadəçi aşağıdakı əməliyyatları edə bilməlidir.
+5.1. Əməliyyatlar arasında aşağıdakı əməliyyat növləri olmalıdır:
+Nəğdləşdirmə
+Mədaxil
+Öz kartları arasında köçürmə
+Bankdaxili istənilən karta köçürmə
+5.2. Əməliyyat növü seçildikdən sonra istifadəçi hansı kart üzərində əməliyyat etmək istədiyini seçməlidir.
+5.2.1. Əgər istifadəçi əməliyyatı öz kartları arasında köçürmə kimi edirsə, hədəf kartı da seçə bilməlidir.
+5.3. İstifadəçi əməliyyat məbləğini yazmalıdır.
+5.3.1. Əgər kartda kifayət qədər vəsait (əməliyyat kredit kartındandırsa, komissiya faizini hesablamaqla) varsa (əməliyyat nəğdləşdirmədirsə, kart blokda olmadığını da yoxlamalısınız), əməliyyat uğurlu olmalıdır.
+5.3.2. Əməliyyatın uğursuz olma səbəbinin hər biri üçün müxtəlif xətalar atın (throw).
+5.4. İstifadəçi əməliyyatı təsdiqləmədən qabaq istədiyi anda ləğv edə bilməlidir.
